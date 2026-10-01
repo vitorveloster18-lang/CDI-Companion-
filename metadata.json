@@ -1,0 +1,6 @@
+{
+  "name": "CDI Companion",
+  "description": "Uma entidade digital que nasce com uma semente de personalidade e continua existindo, pensando e evoluindo continuamente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

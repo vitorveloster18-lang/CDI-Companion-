@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-deep: #f8f9fc;
+  --color-bg-surface: #ffffff;
+  --color-bg-subtle: #f1f4f9;
+  --color-text-soft: #0f172a;
+  --color-text-muted: #475569;
+  --color-accent-indigo: #2d4ee0;
+  --color-accent-cyan: #0284c7;
+  --color-accent-gold: #b45309;
+  --color-term-bg: #0d121c;
+  --color-term-green: #10b981;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  body {
+    @apply bg-bg-deep text-text-soft font-sans antialiased selection:bg-accent-indigo/15 selection:text-accent-indigo;
+    background-color: #f8f9fc;
+    color: #0f172a;
+  }
+}
+
+/* Subtle architectural grid pattern */
+.editorial-grid {
+  background-image: radial-gradient(rgba(100, 116, 139, 0.14) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
